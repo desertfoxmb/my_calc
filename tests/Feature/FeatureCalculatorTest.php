@@ -4,7 +4,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-class MyFirstFutureTest extends TestCase
+class CalcFeatureTest extends TestCase
 {
     public function testHomePage()
     {
@@ -13,6 +13,7 @@ class MyFirstFutureTest extends TestCase
     }
     public function testCalcPage()
     {
+
         $array = array(
             "a" => "4",
             "b" => "2",
@@ -20,6 +21,6 @@ class MyFirstFutureTest extends TestCase
         );
         $response = $this->post('/calc', $array);
         $response->assertStatus(200);
-        $response->assertSee("don&#039;t divide by zero");
+        $response->assertSee("2");
     }
 }

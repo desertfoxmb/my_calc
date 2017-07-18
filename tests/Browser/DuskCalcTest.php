@@ -17,10 +17,11 @@ class MyFirstDuskTest extends DuskTestCase
         $this->browse(function ($browser) {
             $browser->visit('/')
                 ->type('a', 3)
-                ->type('b', 1)
+/**                ->select('action', '*')**/
+                ->type('b', 4)
                 ->press('Execute')
                 ->assertPathIs('/calc')
-                ->assertSee('4');
+                ->assertSee('13');
         });
     }
 }
