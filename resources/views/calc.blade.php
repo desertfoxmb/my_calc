@@ -12,5 +12,5 @@
         <strong>= {{ $result }}</strong>
     @endif
     <button>Execute</button>
-    Boom
+    Boom2
 </form>
